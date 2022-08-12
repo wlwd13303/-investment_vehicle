@@ -8,7 +8,8 @@ Created on Tue Nov 12 21:06:28 2019
 #先引入后面可能用到的包（package）
 import pandas as pd  
 import numpy as np
-from pyecharts import Kline,Line, Bar,Overlap
+from pyecharts.charts import Kline,Line, Bar
+from pyecharts import Over
 from base import ts_pro
 #正常显示画图时出现的中文和负号
 from pylab import mpl
@@ -81,3 +82,6 @@ class Index_data(object):
         overlap.add(line,)
         overlap.add(bar,yaxis_index=1, is_add_yaxis=True)
         return overlap
+
+if __name__ == '__main__':
+    Index_data()
